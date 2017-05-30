@@ -6,14 +6,17 @@ deploy:
   - provider: releases
     api_key:
       secure: EEr+vqgWohvZoJmBWSHLyyeWrW5EQu10ocJuc0X7WREjaTu2id9Cp3U2J6c2wSXvId69ae/uDBHkN8IxWKRUB4YeNao7+K0q4UJefBNkFagHRcr/niEWPbIq0QuO1brHwvveYm7BMx3rbIOPyxmoqdU/Lh1p5avrxsEa+yebmyisyTSOX3IJmTB6ILOG5kdGUZjQMdOHxysIatfIdAFxmm30bolio1Mc34+qEr5wuLUoffGYejXiHaQazl5qGrDDchxkPabyaqW1y64QYLBZlPknT+WMjEgvTbjajOleXTZu+bUBg+1pO2zWTIMZZDQfbPktb3fyI79ouzWOfxrCcYyg9ek1Y7236z9RyLGLcqqziODzvtuZWWucuT2mmtSkTYLVwMePIRPHqcpcFUOLDKemBXflcGIwpKJRR/xH7GOKrFDYx5+1iHMVq+H/Z1oaHBTQzndnrKodLFLbPDri+l9fid67mdo1jqP/5YrD8ljOWQUJWHa6frdoAkxnpMcKuR3+I+93cTxTQY9p/kanbvJcoZDB3IHY1yQsAKkOPXNrzxgk280YB32Qsd+9zf0J+JAhlfnFxdlzj6knwQ0a4X72Ts78142UeREmxfaTDz4Xk36vszSlXHlu2J9kR7EMDGnE2Ggx+mHsZiseb/8l2Fcan7Gl1yqJ43bHxDQv6Bg=
-    file: dist/index.js
+    file: dist/*
+    file_glob: true
+    skip_cleanup: true
     on:
       repo: tdukart/react-random-wheel
-    skip_cleanup: true
+      tags: true
   - provider: npm
     email: tdukart@aloftinteractive.com
     api_key:
       secure: "ST2ia8XEmuD/I1+jaSMUImhX84rcrXojUznUcSHJ2zUDs4Ix3SkATKR0lY7semM/AW+A5MdvM6QwgBxLPcbIg8BS6tAZF6VCAVak47qQLX9e/gk2zKkTzZSTqmll3uQykKtDKpVtopISk3BmdtLMdYrTHq1fK3B8y7Du+103LdUIzQT6Ctf9DyuqVqMwVWgzD+NkyNAwIbtptiTwRye4xwsPWPcV7C3yY/JpWgdIyI98EmSm0uV8LVEvrP7PdC2CL1Xy47YPiAvS3P7beLbyi+yKqKwP7hCUL6ld8WE1rpGs3eV2JPf5/8t/ccQpf4ynAaSamPJIM0tOEELXIkVEYF8renNg6XwKS2s7136XFaZY88pIqLchHhE2zzTiBFGvHvL1dHhXEFq5p8ghu5HmWHMzM+5puFcsMsCXQ+VbF3sLBRbSFPwTO9LtiEtPiuLgHojS8bEhvKbUwtmKUf770HjRfyTlA83QM3gGyka9Ut1WcsKO2Y4W6DP2sCBy6LjisTHwdbZhXgLIzFQ2aivnBbstrCAvqO1LqeXXR++NEGAYJBpGXTAAUifx/V+VkCef27J8gg8KZLMFobixi7G5lezXDlmD7t7CkTKUlyWZRRff+ugZJbEs9jX2TuyBHZvgN0QSgbuqH/OuKNpBYL6T5En0TWjeP9UcQUzD89pG8Ns="
+    skip_cleanup: true
     on:
       repo: tdukart/react-random-wheel
       tags: true

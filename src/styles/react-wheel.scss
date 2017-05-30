@@ -1,0 +1,63 @@
+$red: #d4585f;
+$blue: #8b8aee;
+$green: #4f9a4f;
+
+@mixin shadow($shadow-color) {
+  box-shadow: 0 0 .25em adjust_color($shadow-color, $alpha: .5) inset;
+}
+
+@mixin segmentProps($color, $foreground:false) {
+  background: darken($color, 20%);
+  @if ($foreground) {
+    color: $foreground;
+  } @else {
+    color: $color;
+  }
+}
+
+@mixin segmentPropsActive($color, $foreground:white) {
+  background: $color;
+  color: $foreground;
+  @include shadow(lighten($color, 10%));
+}
+
+.random-wheel {
+
+  position: relative;
+  display: flex;
+
+  &__segment-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__segment {
+    padding: .5em;
+    border: .125em solid black;
+    @include shadow(black);
+    text-align: center;
+    transition: background 50ms, box-shadow 50ms, color 50ms;
+
+    &.blue {
+      @include segmentProps($blue);
+    }
+    &--active.blue {
+      @include segmentPropsActive($blue);
+    }
+
+    &.red {
+      @include segmentProps($red);
+    }
+    &--active.red {
+      @include segmentPropsActive($red);
+    }
+
+    &.green {
+      @include segmentProps($green);
+    }
+    &--active.green {
+      @include segmentPropsActive($green);
+    }
+  }
+
+}

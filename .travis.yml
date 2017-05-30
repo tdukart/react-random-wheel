@@ -1,8 +1,6 @@
 language: node_js
 node_js:
 - '7'
-before_install:
-- npm install
 script: npm run-script dist
 deploy:
   - provider: releases
@@ -11,6 +9,7 @@ deploy:
     file: dist/index.js
     on:
       repo: tdukart/react-random-wheel
+    skip_cleanup: true
   - provider: npm
     email: tdukart@aloftinteractive.com
     api_key:

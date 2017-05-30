@@ -22,7 +22,7 @@ that you wait until `onComplete` is called before doing anything user-facing wit
 selection won't be obvious until then.
 
 ### Example
-See demo/wheel.js
+See [demo/wheel.js](demo/wheel.js)
 
 ## License
 (c) 2017 Todd Dukart. MIT licensed. See LICENSE for more information.

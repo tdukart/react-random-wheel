@@ -1,6 +1,6 @@
 {
   "name": "react-random-wheel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Randomization wheel for React",
   "main": "dist/index.js",
   "author": "Todd Dukart <tdukart@aloftinteractive.com>",

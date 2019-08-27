@@ -1,3 +1,5 @@
+NOTE: This project is quite old and brittle and I don't plan to update it. Sorry for any inconvenience.
+
 ## react-random-wheel
 Randomization wheel for React. Displays a series of segments and, on command, cycles through them to select one at
 random.
